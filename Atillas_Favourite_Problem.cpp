@@ -2,12 +2,14 @@
 #include<algorithm>
 using namespace std;
 void solve(){
-    int arr[3];
-    for(int i=0; i<3; i++){
-        cin>>arr[i];
+    int n; cin>>n;
+    string str;
+    cin>>str;
+    char ch = 'a';
+    for(auto current : str){
+        ch = max(ch,current);
     }
-    sort(arr,arr+3);
-    cout<<arr[1]<<endl;
+    cout<<(ch-'a')+1<<endl;
 
 }
 int main(){
@@ -16,6 +18,5 @@ int main(){
     {
         solve();
     }
-    
     
 }
